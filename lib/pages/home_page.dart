@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:provider/provider.dart';
 import 'package:schoollearning/generated/l10n.dart';
-import 'package:schoollearning/model/quiz/quiz.dart';
-import 'package:schoollearning/model/quiz/quiz_list.dart';
-import 'package:schoollearning/navigation/bottom_navigation_bar.dart';
-import 'package:schoollearning/navigation/route_names.dart';
-import 'package:schoollearning/notifier/auth_notifier.dart';
+import 'package:schoollearning/models/quiz/quiz.dart';
+import 'package:schoollearning/models/quiz/quiz_list.dart';
+import 'package:schoollearning/navigation_widgets/floating_action_button.dart';
+import 'package:schoollearning/routes/route_names.dart';
+import 'package:schoollearning/notifiers/auth_notifier.dart';
 import 'package:schoollearning/services/firestore_database.dart';
 
 class HomePage extends StatefulWidget {

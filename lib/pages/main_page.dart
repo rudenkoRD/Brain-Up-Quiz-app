@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:schoollearning/notifier/page_notifier.dart';
-import '../navigation/bottom_navigation_bar.dart';
+import 'package:schoollearning/navigation_widgets/bottom_bar.dart';
+import 'package:schoollearning/notifiers/page_notifier.dart';
 
 class MainPage extends StatefulWidget {
   // This widget is the root of your application.

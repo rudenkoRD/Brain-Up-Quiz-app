@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:schoollearning/model/user.dart';
-import 'package:schoollearning/model/quiz/quiz.dart';
-import 'package:schoollearning/model/user_data.dart';
+import 'package:schoollearning/models/quiz/quiz.dart';
+import 'package:schoollearning/models/user.dart';
+import 'package:schoollearning/models/user_data.dart';
 
 class FirestoreService {
   final CollectionReference _quizCollection =

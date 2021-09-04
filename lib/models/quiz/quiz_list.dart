@@ -1,47 +1,51 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:provider/provider.dart';
-import 'package:schoollearning/models/quiz/quiz.dart';
 import 'package:schoollearning/routes/route_names.dart';
 import 'package:schoollearning/notifiers/auth_notifier.dart';
+import 'quiz.dart';
 import 'package:schoollearning/services/firestore_database.dart';
 
-class FeaturedPage extends StatefulWidget {
+class LessonsList extends StatefulWidget {
   @override
-  _FeaturedPageState createState() => _FeaturedPageState();
+  _LessonsListState createState() => _LessonsListState();
 }
 
 var quizList = <Quiz>[];
 
-class _FeaturedPageState extends State<FeaturedPage> {
+class _LessonsListState extends State<LessonsList> {
   @override
   void initState() {
+    loadQuizList();
     super.initState();
   }
 
   FirestoreService db = FirestoreService();
   AuthNotifier authNotifier;
+  Stream<List<Quiz>> stream;
+  StreamSubscription subscription;
 
-  loadQuizList(AuthNotifier authNotifier) async {
-    if(authNotifier.user.userData.featuredIds.isEmpty) {
-      quizList = List<Quiz>();
-      return;
-    }
+  loadQuizList() async {
+     stream = db.getQuizList();
 
-    var stream = db.getFeaturedQuizList(authNotifier.user.userData.featuredIds);
-
-    stream.listen((List<Quiz> data) {
+    subscription = stream.listen((List<Quiz> data) {
       setState(() {
         quizList = data;
       });
     });
+  }
 
+
+  @override
+  void dispose() {
+    subscription.cancel();
+    super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
     authNotifier = Provider.of<AuthNotifier>(context);
-    loadQuizList(authNotifier);
 
     return Container(
         color: Colors.blueGrey,
@@ -88,10 +92,8 @@ class _FeaturedPageState extends State<FeaturedPage> {
                           if(authNotifier.user.userData.featuredIds.contains(quizList[index].id)){
                             authNotifier.user.userData.featuredIds.remove(quizList[index].id);
                           }else authNotifier.user.userData.featuredIds.add(quizList[index].id);
-
-                          FirestoreService().addOrUpdateUserData(authNotifier.user);
                         });
-
+                        await FirestoreService().addOrUpdateUserData(authNotifier.user);
                       },
                     ),
                   ),
@@ -185,4 +187,3 @@ Color translatePercentToColor(int value) {
 
   return Color.fromRGBO(red, green, blue, 1);
 }
-

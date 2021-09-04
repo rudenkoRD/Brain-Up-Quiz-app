@@ -3,12 +3,12 @@ import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
 import 'package:provider/provider.dart';
 import 'package:schoollearning/api/app_api.dart';
-import 'package:schoollearning/login_signin_screen/app_title.dart';
+import 'package:schoollearning/login_signin_screen/widgets/app_title.dart';
 import 'package:schoollearning/login_signin_screen/sign_up_screen/signup_form.dart';
-import 'package:schoollearning/model/user.dart';
-import 'package:schoollearning/notifier/auth_notifier.dart';
-import 'package:schoollearning/notifier/loading_notifier.dart';
-import 'package:schoollearning/notifier/logging_page_notifier.dart';
+import 'package:schoollearning/models/user.dart';
+import 'package:schoollearning/notifiers/auth_notifier.dart';
+import 'package:schoollearning/notifiers/loading_notifier.dart';
+import 'package:schoollearning/notifiers/logging_page_notifier.dart';
 
 class SignupScreen extends StatefulWidget {
   @override

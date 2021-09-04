@@ -3,9 +3,9 @@ import 'package:provider/provider.dart';
 import 'package:schoollearning/api/app_api.dart';
 import 'package:schoollearning/generated/l10n.dart';
 import 'package:schoollearning/localization/lang_constants.dart';
-import 'package:schoollearning/model/page.dart';
-import 'package:schoollearning/notifier/auth_notifier.dart';
-import 'package:schoollearning/notifier/page_notifier.dart';
+import 'package:schoollearning/models/page.dart';
+import 'package:schoollearning/notifiers/auth_notifier.dart';
+import 'package:schoollearning/notifiers/page_notifier.dart';
 
 import '../main.dart';
 

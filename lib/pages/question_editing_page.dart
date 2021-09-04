@@ -1,21 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:schoollearning/generated/l10n.dart';
-import 'package:schoollearning/model/pair.dart';
-import 'package:schoollearning/model/quiz/questions/matching_question/matching_question.dart';
-import 'package:schoollearning/model/quiz/questions/matching_question/matching_question_editing_controller.dart';
-import 'package:schoollearning/model/quiz/questions/multiple_choice_question/multiple_choice_question.dart';
-import 'package:schoollearning/model/quiz/questions/multiple_choice_question/multiple_choice_question_editing_controller.dart';
-import 'package:schoollearning/model/quiz/questions/ordering_question/ordering_question.dart';
-import 'package:schoollearning/model/quiz/questions/ordering_question/ordering_question_editing_controller.dart';
-import 'package:schoollearning/model/quiz/questions/question.dart';
-import 'package:schoollearning/model/quiz/questions/question_type.dart';
-import 'package:schoollearning/model/quiz/questions/short_answer_question/short_answer_question.dart';
-import 'package:schoollearning/model/quiz/questions/short_answer_question/short_answer_question_editing_controller.dart';
-import 'package:schoollearning/model/quiz/questions/single_choice_question/single_choice_question.dart';
-import 'package:schoollearning/model/quiz/questions/single_choice_question/single_choice_question_editing_controller.dart';
-import 'package:schoollearning/model/quiz/questions/true_false_question/true_false_question.dart';
-import 'package:schoollearning/model/quiz/questions/true_false_question/true_false_question_editing_controller.dart';
+import 'package:schoollearning/models/pair.dart';
+import 'package:schoollearning/models/quiz/questions/matching_question/matching_question.dart';
+import 'package:schoollearning/models/quiz/questions/matching_question/matching_question_editing_controller.dart';
+import 'package:schoollearning/models/quiz/questions/multiple_choice_question/multiple_choice_question.dart';
+import 'package:schoollearning/models/quiz/questions/multiple_choice_question/multiple_choice_question_editing_controller'
+    '.dart';
+import 'package:schoollearning/models/quiz/questions/ordering_question/ordering_question.dart';
+import 'package:schoollearning/models/quiz/questions/ordering_question/ordering_question_editing_controller.dart';
+import 'package:schoollearning/models/quiz/questions/question.dart';
+import 'package:schoollearning/models/quiz/questions/question_type.dart';
+import 'package:schoollearning/models/quiz/questions/short_answer_question/short_answer_question.dart';
+import 'package:schoollearning/models/quiz/questions/short_answer_question/short_answer_question_editing_controller.dart';
+import 'package:schoollearning/models/quiz/questions/single_choice_question/single_choice_question.dart';
+import 'package:schoollearning/models/quiz/questions/single_choice_question/single_choice_question_editing_controller.dart';
+import 'package:schoollearning/models/quiz/questions/true_false_question/true_false_question.dart';
+import 'package:schoollearning/models/quiz/questions/true_false_question/true_false_question_editing_controller.dart';
 
 class TaskEditingPage extends StatefulWidget {
   final Question question;

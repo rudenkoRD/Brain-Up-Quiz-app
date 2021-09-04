@@ -3,8 +3,8 @@ import 'package:flutter/widgets.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
 import 'package:provider/provider.dart';
 import 'package:schoollearning/generated/l10n.dart';
-import 'package:schoollearning/model/quiz/quiz.dart';
-import 'package:schoollearning/notifier/auth_notifier.dart';
+import 'package:schoollearning/models/quiz/quiz.dart';
+import 'package:schoollearning/notifiers/auth_notifier.dart';
 import 'package:schoollearning/services/firestore_database.dart';
 
 class QuizResultPage extends StatefulWidget {

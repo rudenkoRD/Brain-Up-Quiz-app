@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:provider/provider.dart';
 import 'package:schoollearning/generated/l10n.dart';
-import 'package:schoollearning/model/quiz/questions/question.dart';
-import 'package:schoollearning/model/quiz/quiz.dart';
-import 'package:schoollearning/navigation/route_names.dart';
-import 'package:schoollearning/notifier/auth_notifier.dart';
+import 'package:schoollearning/models/quiz/questions/question.dart';
+import 'package:schoollearning/models/quiz/quiz.dart';
+import 'package:schoollearning/routes/route_names.dart';
+import 'package:schoollearning/notifiers/auth_notifier.dart';
 import 'package:schoollearning/services/firestore_database.dart';
 
 class TestingPage extends StatefulWidget {

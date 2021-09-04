@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:schoollearning/generated/l10n.dart';
-import 'package:schoollearning/model/quiz/questions/matching_question/matching_question.dart';
-import 'package:schoollearning/model/quiz/questions/multiple_choice_question/multiple_choice_question.dart';
-import 'package:schoollearning/model/quiz/questions/ordering_question/ordering_question.dart';
-import 'package:schoollearning/model/quiz/questions/question.dart';
-import 'package:schoollearning/model/quiz/questions/question_type.dart';
-import 'package:schoollearning/model/quiz/questions/questions_overview_list.dart';
-import 'package:schoollearning/model/quiz/questions/short_answer_question/short_answer_question.dart';
-import 'package:schoollearning/model/quiz/questions/single_choice_question/single_choice_question.dart';
-import 'package:schoollearning/model/quiz/questions/true_false_question/true_false_question.dart';
-import 'package:schoollearning/model/quiz/quiz.dart';
-import 'package:schoollearning/navigation/route_names.dart';
-import 'package:schoollearning/notifier/auth_notifier.dart';
+import 'package:schoollearning/models/quiz/questions/matching_question/matching_question.dart';
+import 'package:schoollearning/models/quiz/questions/multiple_choice_question/multiple_choice_question.dart';
+import 'package:schoollearning/models/quiz/questions/ordering_question/ordering_question.dart';
+import 'package:schoollearning/models/quiz/questions/question.dart';
+import 'package:schoollearning/models/quiz/questions/question_type.dart';
+import 'package:schoollearning/models/quiz/questions/questions_overview_list.dart';
+import 'package:schoollearning/models/quiz/questions/short_answer_question/short_answer_question.dart';
+import 'package:schoollearning/models/quiz/questions/single_choice_question/single_choice_question.dart';
+import 'package:schoollearning/models/quiz/questions/true_false_question/true_false_question.dart';
+import 'package:schoollearning/models/quiz/quiz.dart';
+import 'package:schoollearning/routes/route_names.dart';
+import 'package:schoollearning/notifiers/auth_notifier.dart';
 import 'package:schoollearning/services/firestore_database.dart';
 
 class QuizOverviewPage extends StatefulWidget {
