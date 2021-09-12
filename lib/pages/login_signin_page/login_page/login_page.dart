@@ -3,12 +3,12 @@ import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
 import 'package:provider/provider.dart';
 import 'package:schoollearning/api/app_api.dart';
-import 'package:schoollearning/login_signin_screen/login_screen/login_form.dart';
 import 'package:schoollearning/models/user.dart';
 import 'package:schoollearning/notifiers/auth_notifier.dart';
 import 'package:schoollearning/notifiers/loading_notifier.dart';
 import 'package:schoollearning/notifiers/logging_page_notifier.dart';
 import '../widgets/app_title.dart';
+import 'login_form.dart';
 
 class LoginScreen extends StatefulWidget {
   @override
@@ -52,10 +52,10 @@ class _LoginScreenState extends State<LoginScreen> {
                       SizedBox(
                         height: 15,
                       ),
-                      googleLoginButton(),
-                      SizedBox(
-                        height: 20,
-                      ),
+                      // googleLoginButton(),
+                      // SizedBox(
+                      //   height: 20,
+                      // ),
                       switchToRegisterButton(width),
                     ],
                   )

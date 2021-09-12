@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:schoollearning/models/user.dart';
 import 'package:schoollearning/notifiers/auth_notifier.dart';
 import 'package:schoollearning/notifiers/loading_notifier.dart';
+import 'package:schoollearning/generated/l10n.dart';
+
 
 login(AppUser user, AuthNotifier authNotifier, LoadingNotifier loadingNotifier, BuildContext context) async {
   loadingNotifier.isLoading = true;
@@ -13,7 +15,7 @@ login(AppUser user, AuthNotifier authNotifier, LoadingNotifier loadingNotifier, 
     Scaffold.of(context).showSnackBar(
       SnackBar(
         content: Text(
-          'Fail. Check your password and username',
+          S.of(context).login_fail_label,
           style: TextStyle(color: Colors.red),
         ),
       ),
@@ -42,7 +44,7 @@ signup(AppUser user, AuthNotifier authNotifier, LoadingNotifier loadingNotifier,
     loadingNotifier.isLoading = false;
     Scaffold.of(context).showSnackBar(SnackBar(
       content: Text(
-        'Fail. Try again later',
+        S.of(context).signup_fail_label,
         style: TextStyle(color: Colors.red),
       ),
     ));

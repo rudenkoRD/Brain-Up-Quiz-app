@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:schoollearning/main.dart';
 import 'package:schoollearning/models/quiz/questions/question.dart';
 import 'package:schoollearning/models/quiz/quiz.dart';
-import 'package:schoollearning/pages/home_page.dart';
-import 'package:schoollearning/pages/my_page.dart';
-import 'package:schoollearning/pages/question_editing_page.dart';
-import 'package:schoollearning/pages/quiz_overview_page.dart';
-import 'package:schoollearning/pages/quiz_result_page.dart';
-import 'package:schoollearning/pages/testing_page.dart';
+import 'package:schoollearning/pages/home_page/home_page.dart';
+import 'package:schoollearning/pages/base/my_page.dart';
+import 'package:schoollearning/pages/question_editing_page/question_editing_page.dart';
+import 'package:schoollearning/pages/quiz_overiew_page/quiz_overview_page.dart';
+import 'package:schoollearning/pages/quiz_result_page/quiz_result_page.dart';
+import 'package:schoollearning/pages/testing_page/testing_page.dart';
 import 'route_names.dart';
 
 class RouteGenerator {

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:schoollearning/pages/featured_page.dart';
-import 'package:schoollearning/pages/home_page.dart';
-import 'package:schoollearning/pages/settings_page.dart';
+import 'package:schoollearning/pages/featured_page/featured_page.dart';
+import 'package:schoollearning/pages/home_page/home_page.dart';
+import 'package:schoollearning/pages/settings_page/settings_page.dart';
 import 'package:schoollearning/generated/l10n.dart';
 
 

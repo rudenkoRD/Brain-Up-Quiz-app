@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:schoollearning/login_signin_screen/widgets/input_fields/input_fields.dart';
 import 'package:schoollearning/models/user.dart';
+import 'package:schoollearning/pages/login_signin_page/widgets/input_fields/input_fields.dart';
 
 class LoginForm extends StatefulWidget {
   const LoginForm(this._formKey);

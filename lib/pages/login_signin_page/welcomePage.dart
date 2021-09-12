@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:schoollearning/login_signin_screen/login_screen/login_screen.dart';
-import 'package:schoollearning/login_signin_screen/sign_up_screen/sign_up_sreen.dart';
 import 'package:schoollearning/notifiers/logging_page_notifier.dart';
+import 'package:schoollearning/pages/login_signin_page/sign_up_page/sign_up_page.dart';
+
+import 'login_page/login_page.dart';
 
 
 class WelcomePage extends StatefulWidget {

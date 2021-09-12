@@ -77,5 +77,8 @@
   "language_label" : "Язык",
   "select_lang_label" : "Выбрерите язык",
   "english_lang_label" : "Английский",
-  "russian_lang_label" : "Русский"
+  "russian_lang_label" : "Русский",
+  "waiting_for_wifi_label" : "Ожидане интернет соединения",
+  "login_fail_label" : "Ошибка, проверьте пароль и имя пользователя",
+  "signup_fail_label": "Ошибка, попробуйте позже"
 }

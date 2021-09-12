@@ -7,7 +7,7 @@ import 'package:schoollearning/models/page.dart';
 import 'package:schoollearning/notifiers/auth_notifier.dart';
 import 'package:schoollearning/notifiers/page_notifier.dart';
 
-import '../main.dart';
+import '../../main.dart';
 
 class SettingsPage extends StatefulWidget {
   @override
@@ -113,7 +113,7 @@ class _SettingsPageState extends State<SettingsPage> {
                         ),
                       ),
                       subtitle: Text(
-                        '${S.of(context).current_lang_label}: ${currentLocale.languageCode}',
+                        '${S.of(context).current_lang_label}: ${getNameOfLangByLocale(currentLocale, context)}',
                         style: TextStyle(
                           shadows: [
                             Shadow(color: Colors.black12, offset: Offset(0.5, 0.5)),
@@ -230,5 +230,13 @@ class _SettingsPageState extends State<SettingsPage> {
   void exitAccount() {
     signout(authNotifier);
     pageNotifier.setPage(AppPage.HOME);
+  }
+
+  String getNameOfLangByLocale(Locale locale, context){
+    switch(locale.languageCode) {
+      case 'ru' : return S.of(context).russian_lang_label;
+      case 'en' : return S.of(context).english_lang_label;
+      default: throw('locale isn\'t supported');
+    }
   }
 }

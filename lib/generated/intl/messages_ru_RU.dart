@@ -55,6 +55,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "insane_label" : MessageLookupByLibrary.simpleMessage("невозможно"),
     "language_label" : MessageLookupByLibrary.simpleMessage("Язык"),
     "leave_blank_for_other_answer" : MessageLookupByLibrary.simpleMessage("Оставьте пустым для лишнего ответа"),
+    "login_fail_label" : MessageLookupByLibrary.simpleMessage("Ошибка, проверьте пароль и имя пользователя"),
     "main_screen_title" : MessageLookupByLibrary.simpleMessage("Главная"),
     "mark_label" : MessageLookupByLibrary.simpleMessage("Оценка"),
     "match_all_options_with_correct_answers_label" : MessageLookupByLibrary.simpleMessage("Сопоставьте ответы с вариантами"),
@@ -87,6 +88,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "select_question_type_label" : MessageLookupByLibrary.simpleMessage("Тип вопроса"),
     "settings_screen_title" : MessageLookupByLibrary.simpleMessage("Настройки"),
     "short_answer_question_label" : MessageLookupByLibrary.simpleMessage("Краткий ответ"),
+    "signup_fail_label" : MessageLookupByLibrary.simpleMessage("Ошибка, попробуйте позже"),
     "single_choice_question_label" : MessageLookupByLibrary.simpleMessage("Один правильный ответ"),
     "subject_label" : MessageLookupByLibrary.simpleMessage("Тема"),
     "swipe_to_delete_label" : MessageLookupByLibrary.simpleMessage("Смахните чтобы удалить"),
@@ -97,6 +99,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "unknown_label" : MessageLookupByLibrary.simpleMessage("???"),
     "use_double_tap_to_delete_label" : MessageLookupByLibrary.simpleMessage("Чтобы удалить задание используйте двойное нажатие"),
     "user_answer" : MessageLookupByLibrary.simpleMessage("Пользовательский ответ"),
+    "waiting_for_wifi_label" : MessageLookupByLibrary.simpleMessage("Ожидане интернет соединения"),
     "yes_label" : MessageLookupByLibrary.simpleMessage("Да"),
     "yes_no_question_label" : MessageLookupByLibrary.simpleMessage("Да/нет")
   };

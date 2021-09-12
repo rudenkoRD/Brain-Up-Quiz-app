@@ -1,6 +1,7 @@
 import 'package:connectivity/connectivity.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
+import 'package:schoollearning/generated/l10n.dart';
 import 'package:schoollearning/services/my_connectivity.dart';
 
 class MyPage extends StatefulWidget {
@@ -48,7 +49,7 @@ class _MyPageState extends State<MyPage> {
                 Container(
                   // color: Colors.blueGrey,
                   child: Text(
-                    'Waiting for internet connection',
+                    S.of(context).waiting_for_wifi_label,
                     textAlign: TextAlign.center,
                     style: TextStyle(
                         color: Colors.white,

@@ -45,10 +45,10 @@ class S {
     );
   }
 
-  /// `my tests`
+  /// `My tests`
   String get my_tests_bar_title {
     return Intl.message(
-      'my tests',
+      'My tests',
       name: 'my_tests_bar_title',
       desc: '',
       args: [],
@@ -85,20 +85,20 @@ class S {
     );
   }
 
-  /// `title`
+  /// `Title`
   String get heading_label {
     return Intl.message(
-      'title',
+      'Title',
       name: 'heading_label',
       desc: '',
       args: [],
     );
   }
 
-  /// `subject`
+  /// `Subject`
   String get subject_label {
     return Intl.message(
-      'subject',
+      'Subject',
       name: 'subject_label',
       desc: '',
       args: [],
@@ -155,140 +155,140 @@ class S {
     );
   }
 
-  /// `author`
+  /// `Author`
   String get author_label {
     return Intl.message(
-      'author',
+      'Author',
       name: 'author_label',
       desc: '',
       args: [],
     );
   }
 
-  /// `created at`
+  /// `Created at`
   String get created_at_label {
     return Intl.message(
-      'created at',
+      'Created at',
       name: 'created_at_label',
       desc: '',
       args: [],
     );
   }
 
-  /// `difficulty`
+  /// `Dfficulty`
   String get difficulty_label {
     return Intl.message(
-      'difficulty',
+      'Dfficulty',
       name: 'difficulty_label',
       desc: '',
       args: [],
     );
   }
 
-  /// `mark`
+  /// `Mark`
   String get mark_label {
     return Intl.message(
-      'mark',
+      'Mark',
       name: 'mark_label',
       desc: '',
       args: [],
     );
   }
 
-  /// `marks`
+  /// `Marks`
   String get rating_label {
     return Intl.message(
-      'marks',
+      'Marks',
       name: 'rating_label',
       desc: '',
       args: [],
     );
   }
 
-  /// `single choice`
+  /// `Single choice`
   String get single_choice_question_label {
     return Intl.message(
-      'single choice',
+      'Single choice',
       name: 'single_choice_question_label',
       desc: '',
       args: [],
     );
   }
 
-  /// `true / false`
+  /// `True / false`
   String get yes_no_question_label {
     return Intl.message(
-      'true / false',
+      'True / false',
       name: 'yes_no_question_label',
       desc: '',
       args: [],
     );
   }
 
-  /// `short answer`
+  /// `Short answer`
   String get short_answer_question_label {
     return Intl.message(
-      'short answer',
+      'Short answer',
       name: 'short_answer_question_label',
       desc: '',
       args: [],
     );
   }
 
-  /// `correct order`
+  /// `Correct order`
   String get correct_order_question_label {
     return Intl.message(
-      'correct order',
+      'Correct order',
       name: 'correct_order_question_label',
       desc: '',
       args: [],
     );
   }
 
-  /// `multiple choice`
+  /// `Multiple choice`
   String get multiple_answer_question_label {
     return Intl.message(
-      'multiple choice',
+      'Multiple choice',
       name: 'multiple_answer_question_label',
       desc: '',
       args: [],
     );
   }
 
-  /// `matching`
+  /// `Matching`
   String get matching_question_question_label {
     return Intl.message(
-      'matching',
+      'Matching',
       name: 'matching_question_question_label',
       desc: '',
       args: [],
     );
   }
 
-  /// `take the test`
+  /// `Take the test`
   String get take_test_label {
     return Intl.message(
-      'take the test',
+      'Take the test',
       name: 'take_test_label',
       desc: '',
       args: [],
     );
   }
 
-  /// `delete`
+  /// `Delete`
   String get delete_label {
     return Intl.message(
-      'delete',
+      'Delete',
       name: 'delete_label',
       desc: '',
       args: [],
     );
   }
 
-  /// `enter a new title`
+  /// `Enter a new title`
   String get enter_heading_label {
     return Intl.message(
-      'enter a new title',
+      'Enter a new title',
       name: 'enter_heading_label',
       desc: '',
       args: [],
@@ -335,80 +335,80 @@ class S {
     );
   }
 
-  /// `enter a new subject`
+  /// `Enter a new subject`
   String get enter_subject_label {
     return Intl.message(
-      'enter a new subject',
+      'Enter a new subject',
       name: 'enter_subject_label',
       desc: '',
       args: [],
     );
   }
 
-  /// `next`
+  /// `Next`
   String get next_label {
     return Intl.message(
-      'next',
+      'Next',
       name: 'next_label',
       desc: '',
       args: [],
     );
   }
 
-  /// `select one correct answer`
+  /// `Select one correct answer`
   String get select_one_correct_answer_label {
     return Intl.message(
-      'select one correct answer',
+      'Select one correct answer',
       name: 'select_one_correct_answer_label',
       desc: '',
       args: [],
     );
   }
 
-  /// `answer error`
+  /// `Answer error`
   String get answer_error_label {
     return Intl.message(
-      'answer error',
+      'Answer error',
       name: 'answer_error_label',
       desc: '',
       args: [],
     );
   }
 
-  /// `select a correct answer`
+  /// `Select a correct answer`
   String get select_correct_answer_label {
     return Intl.message(
-      'select a correct answer',
+      'Select a correct answer',
       name: 'select_correct_answer_label',
       desc: '',
       args: [],
     );
   }
 
-  /// `true`
+  /// `True`
   String get yes_label {
     return Intl.message(
-      'true',
+      'True',
       name: 'yes_label',
       desc: '',
       args: [],
     );
   }
 
-  /// `false`
+  /// `False`
   String get no_label {
     return Intl.message(
-      'false',
+      'False',
       name: 'no_label',
       desc: '',
       args: [],
     );
   }
 
-  /// `enter a correct answer`
+  /// `Enter a correct answer`
   String get enter_correct_answer_label {
     return Intl.message(
-      'enter a correct answer',
+      'Enter a correct answer',
       name: 'enter_correct_answer_label',
       desc: '',
       args: [],
@@ -425,50 +425,50 @@ class S {
     );
   }
 
-  /// `field is required`
+  /// `Field is required`
   String get field_cant_be_empty_label {
     return Intl.message(
-      'field is required',
+      'Field is required',
       name: 'field_cant_be_empty_label',
       desc: '',
       args: [],
     );
   }
 
-  /// `place items in the correct order`
+  /// `Place items in the correct order`
   String get place_items_in_the_correct_order_label {
     return Intl.message(
-      'place items in the correct order',
+      'Place items in the correct order',
       name: 'place_items_in_the_correct_order_label',
       desc: '',
       args: [],
     );
   }
 
-  /// `select all correct answers`
+  /// `Select all correct answers`
   String get select_all_correct_answers_label {
     return Intl.message(
-      'select all correct answers',
+      'Select all correct answers',
       name: 'select_all_correct_answers_label',
       desc: '',
       args: [],
     );
   }
 
-  /// `match all options with correct answers`
+  /// `Match all options with correct answers`
   String get match_all_options_with_correct_answers_label {
     return Intl.message(
-      'match all options with correct answers',
+      'Match all options with correct answers',
       name: 'match_all_options_with_correct_answers_label',
       desc: '',
       args: [],
     );
   }
 
-  /// `finish the test`
+  /// `Finish the test`
   String get finish_test_label {
     return Intl.message(
-      'finish the test',
+      'Finish the test',
       name: 'finish_test_label',
       desc: '',
       args: [],
@@ -485,90 +485,90 @@ class S {
     );
   }
 
-  /// `the test will be permanently deleted!`
+  /// `The test will be permanently deleted!`
   String get delete_text_warning {
     return Intl.message(
-      'the test will be permanently deleted!',
+      'The test will be permanently deleted!',
       name: 'delete_text_warning',
       desc: '',
       args: [],
     );
   }
 
-  /// `add new question`
+  /// `Add new question`
   String get add_question_label {
     return Intl.message(
-      'add new question',
+      'Add new question',
       name: 'add_question_label',
       desc: '',
       args: [],
     );
   }
 
-  /// `select type of question`
+  /// `Select type of question`
   String get select_question_type_label {
     return Intl.message(
-      'select type of question',
+      'Select type of question',
       name: 'select_question_type_label',
       desc: '',
       args: [],
     );
   }
 
-  /// `double tap to delete the question`
+  /// `Double tap to delete the question`
   String get use_double_tap_to_delete_label {
     return Intl.message(
-      'double tap to delete the question',
+      'Double tap to delete the question',
       name: 'use_double_tap_to_delete_label',
       desc: '',
       args: [],
     );
   }
 
-  /// `swipe to delete`
+  /// `Swipe to delete`
   String get swipe_to_delete_label {
     return Intl.message(
-      'swipe to delete',
+      'Swipe to delete',
       name: 'swipe_to_delete_label',
       desc: '',
       args: [],
     );
   }
 
-  /// `option deleted`
+  /// `Option deleted`
   String get option_deleted_label {
     return Intl.message(
-      'option deleted',
+      'Option deleted',
       name: 'option_deleted_label',
       desc: '',
       args: [],
     );
   }
 
-  /// `incorrect option`
+  /// `Incorrect option`
   String get incorrect_option_label {
     return Intl.message(
-      'incorrect option',
+      'Incorrect option',
       name: 'incorrect_option_label',
       desc: '',
       args: [],
     );
   }
 
-  /// `correct option`
+  /// `Correct option`
   String get correct_option_label {
     return Intl.message(
-      'correct option',
+      'Correct option',
       name: 'correct_option_label',
       desc: '',
       args: [],
     );
   }
 
-  /// `user's answer`
+  /// `User's answer`
   String get user_answer {
     return Intl.message(
-      'user\'s answer',
+      'User\'s answer',
       name: 'user_answer',
       desc: '',
       args: [],
@@ -595,40 +595,40 @@ class S {
     );
   }
 
-  /// `the field should be unique`
+  /// `The field should be unique`
   String get field_should_be_unique {
     return Intl.message(
-      'the field should be unique',
+      'The field should be unique',
       name: 'field_should_be_unique',
       desc: '',
       args: [],
     );
   }
 
-  /// `leave blank for other answer`
+  /// `Leave blank for wrong option`
   String get leave_blank_for_other_answer {
     return Intl.message(
-      'leave blank for other answer',
+      'Leave blank for wrong option',
       name: 'leave_blank_for_other_answer',
       desc: '',
       args: [],
     );
   }
 
-  /// `quiz should have at least one question!`
+  /// `Quiz should have at least one question!`
   String get quiz_should_have_questions_warning_label {
     return Intl.message(
-      'quiz should have at least one question!',
+      'Quiz should have at least one question!',
       name: 'quiz_should_have_questions_warning_label',
       desc: '',
       args: [],
     );
   }
 
-  /// `Test not passed`
+  /// `Quiz not passed`
   String get test_not_completed_label {
     return Intl.message(
-      'Test not passed',
+      'Quiz not passed',
       name: 'test_not_completed_label',
       desc: '',
       args: [],
@@ -655,10 +655,10 @@ class S {
     );
   }
 
-  /// `continue`
+  /// `Continue`
   String get continue_label {
     return Intl.message(
-      'continue',
+      'Continue',
       name: 'continue_label',
       desc: '',
       args: [],
@@ -675,10 +675,10 @@ class S {
     );
   }
 
-  /// `question deleted`
+  /// `Question deleted`
   String get question_deleted_label {
     return Intl.message(
-      'question deleted',
+      'Question deleted',
       name: 'question_deleted_label',
       desc: '',
       args: [],
@@ -810,6 +810,36 @@ class S {
     return Intl.message(
       'Russian',
       name: 'russian_lang_label',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Waiting for internet connection`
+  String get waiting_for_wifi_label {
+    return Intl.message(
+      'Waiting for internet connection',
+      name: 'waiting_for_wifi_label',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Fail. Check your password and username`
+  String get login_fail_label {
+    return Intl.message(
+      'Fail. Check your password and username',
+      name: 'login_fail_label',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Fail. Try again later`
+  String get signup_fail_label {
+    return Intl.message(
+      'Fail. Try again later',
+      name: 'signup_fail_label',
       desc: '',
       args: [],
     );

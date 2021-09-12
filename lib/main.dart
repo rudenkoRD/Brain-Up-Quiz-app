@@ -4,17 +4,17 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:provider/provider.dart';
 import 'package:schoollearning/generated/l10n.dart';
+import 'package:schoollearning/pages/login_signin_page/welcomePage.dart';
 import 'package:schoollearning/routes/route_names.dart';
 import 'package:schoollearning/notifiers/loading_notifier.dart';
 import 'package:schoollearning/notifiers/logging_page_notifier.dart';
-import 'package:schoollearning/pages/main_page.dart';
+import 'package:schoollearning/pages/base/main_page.dart';
 import 'package:schoollearning/routes/route-generator.dart';
 import 'package:schoollearning/notifiers/auth_notifier.dart';
 import 'package:schoollearning/notifiers/page_notifier.dart';
 import 'api/app_api.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'localization/lang_constants.dart';
-import 'login_signin_screen/welcomePage.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -131,7 +131,9 @@ class _MyAppState extends State<MyApp> {
               },
             );
           }
-          return Container();
+          return Container(
+            color: Colors.white,
+          );
         }
     );
   }
