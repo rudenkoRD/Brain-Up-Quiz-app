@@ -4,6 +4,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:provider/provider.dart';
 import 'package:schoollearning/generated/l10n.dart';
+import 'package:schoollearning/localization/lang_helper.dart';
 import 'package:schoollearning/pages/login_signin_page/welcomePage.dart';
 import 'package:schoollearning/routes/route_names.dart';
 import 'package:schoollearning/notifiers/loading_notifier.dart';

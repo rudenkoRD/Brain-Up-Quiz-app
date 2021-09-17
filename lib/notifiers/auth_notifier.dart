@@ -1,5 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:schoollearning/api/app_api.dart';
+import 'package:schoollearning/models/page.dart';
 import 'package:schoollearning/models/user.dart';
 import 'package:schoollearning/models/user_data.dart';
 import 'package:schoollearning/services/firestore_database.dart';
@@ -12,6 +14,7 @@ class AuthNotifier with ChangeNotifier {
   AppUser get user => _user;
   bool _isInitialized = false;
   get isInitialized => _isInitialized;
+
   set isInitialized(newValue) {
     _isInitialized = newValue;
     notifyListeners();
@@ -35,5 +38,10 @@ class AuthNotifier with ChangeNotifier {
     });
 
     notifyListeners();
+  }
+
+  exitAccount(pageNotifier) {
+    signout(this);
+    pageNotifier.setPage(AppPage.HOME);
   }
 }
