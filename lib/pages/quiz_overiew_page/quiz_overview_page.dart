@@ -14,6 +14,7 @@ import 'package:schoollearning/models/quiz/quiz.dart';
 import 'package:schoollearning/routes/route_names.dart';
 import 'package:schoollearning/notifiers/auth_notifier.dart';
 import 'package:schoollearning/services/firestore_database.dart';
+import 'package:schoollearning/services/internet_connection_check.dart';
 
 class QuizOverviewPage extends StatefulWidget {
   final Quiz quiz;
@@ -28,6 +29,20 @@ class _QuizOverviewPageState extends State<QuizOverviewPage> {
   _QuizOverviewPageState(this.quiz);
 
   final GlobalKey<FormState> _changingFormKey = GlobalKey<FormState>();
+
+  InternetConnection internetConnection = InternetConnection();
+
+  @override
+  void initState() {
+    internetConnection.checkConnection(context);
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    internetConnection.listener.cancel();
+    super.dispose();
+  }
 
   Quiz quiz;
   AuthNotifier authNotifier;

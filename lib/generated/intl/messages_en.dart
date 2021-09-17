@@ -99,6 +99,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "unknown_label" : MessageLookupByLibrary.simpleMessage("???"),
     "use_double_tap_to_delete_label" : MessageLookupByLibrary.simpleMessage("Double tap to delete the question"),
     "user_answer" : MessageLookupByLibrary.simpleMessage("User\'s answer"),
+    "waiting_for_internet_label" : MessageLookupByLibrary.simpleMessage("Waiting for internet connection."),
     "waiting_for_wifi_label" : MessageLookupByLibrary.simpleMessage("Waiting for internet connection"),
     "yes_label" : MessageLookupByLibrary.simpleMessage("True"),
     "yes_no_question_label" : MessageLookupByLibrary.simpleMessage("True / false")

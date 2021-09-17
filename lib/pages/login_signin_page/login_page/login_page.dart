@@ -7,6 +7,7 @@ import 'package:schoollearning/models/user.dart';
 import 'package:schoollearning/notifiers/auth_notifier.dart';
 import 'package:schoollearning/notifiers/loading_notifier.dart';
 import 'package:schoollearning/notifiers/logging_page_notifier.dart';
+import 'package:schoollearning/services/internet_connection_check.dart';
 import '../widgets/app_title.dart';
 import 'login_form.dart';
 
@@ -20,12 +21,28 @@ class _LoginScreenState extends State<LoginScreen> {
   AppUser _user = AppUser();
   LoggingPageNotifier loggingPageNotifier;
 
+  InternetConnection internetConnection = InternetConnection();
+
+  @override
+  void initState() {
+    internetConnection.checkConnection(context);
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    internetConnection.listener.cancel();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     loggingPageNotifier = Provider.of<LoggingPageNotifier>(context);
 
     var height = MediaQuery.of(context).size.height - 50;
     var width = MediaQuery.of(context).size.width;
+
+
 
     return Scaffold(
       body: Builder(

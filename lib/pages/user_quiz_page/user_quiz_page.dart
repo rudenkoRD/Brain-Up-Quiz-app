@@ -10,6 +10,6 @@ class UserQuizPage extends StatefulWidget {
 class _UserQuizPageState extends State<UserQuizPage> {
   @override
   Widget build(BuildContext context) {
-    return QuizList(true);
+    return QuizList();
   }
 }

@@ -6,6 +6,7 @@ import 'package:schoollearning/generated/l10n.dart';
 import 'package:schoollearning/models/quiz/quiz.dart';
 import 'package:schoollearning/notifiers/auth_notifier.dart';
 import 'package:schoollearning/services/firestore_database.dart';
+import 'package:schoollearning/services/internet_connection_check.dart';
 
 class QuizResultPage extends StatefulWidget {
   final double userScore;
@@ -19,6 +20,20 @@ class QuizResultPage extends StatefulWidget {
 
 class _QuizResultPageState extends State<QuizResultPage> {
   AuthNotifier authNotifier;
+
+  InternetConnection internetConnection = InternetConnection();
+
+  @override
+  void initState() {
+    internetConnection.checkConnection(context);
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    internetConnection.listener.cancel();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {

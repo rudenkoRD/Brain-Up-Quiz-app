@@ -9,6 +9,7 @@ import 'package:schoollearning/notifiers/loading_notifier.dart';
 import 'package:schoollearning/notifiers/logging_page_notifier.dart';
 import 'package:schoollearning/pages/login_signin_page/sign_up_page/signup_form.dart';
 import 'package:schoollearning/pages/login_signin_page/widgets/app_title.dart';
+import 'package:schoollearning/services/internet_connection_check.dart';
 
 class SignupScreen extends StatefulWidget {
   @override
@@ -19,6 +20,20 @@ class _SignupScreenState extends State<SignupScreen> {
   GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   LoggingPageNotifier loggingPageNotifier;
   AppUser _user = AppUser();
+
+  InternetConnection internetConnection = InternetConnection();
+
+  @override
+  void initState() {
+    internetConnection.checkConnection(context);
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    internetConnection.listener.cancel();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {

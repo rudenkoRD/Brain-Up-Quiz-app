@@ -7,6 +7,7 @@ import 'package:schoollearning/models/quiz/quiz.dart';
 import 'package:schoollearning/routes/route_names.dart';
 import 'package:schoollearning/notifiers/auth_notifier.dart';
 import 'package:schoollearning/services/firestore_database.dart';
+import 'package:schoollearning/services/internet_connection_check.dart';
 
 class TestingPage extends StatefulWidget {
   final Quiz quiz;
@@ -26,8 +27,11 @@ class _TestingPageState extends State<TestingPage> {
   List<Question> questions;
   AuthNotifier authNotifier;
 
+  InternetConnection internetConnection = InternetConnection();
+
   @override
   void initState() {
+    internetConnection.checkConnection(context);
     currentQuestion = 0;
     userScore = 0;
     totalQuestionsCount = widget.quiz.questions.length;
@@ -42,6 +46,7 @@ class _TestingPageState extends State<TestingPage> {
 
   @override
   void dispose() {
+    internetConnection.listener.cancel();
     _isDispose = true;
     super.dispose();
   }

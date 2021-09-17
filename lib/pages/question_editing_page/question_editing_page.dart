@@ -17,6 +17,7 @@ import 'package:schoollearning/models/quiz/questions/single_choice_question/sing
 import 'package:schoollearning/models/quiz/questions/single_choice_question/single_choice_question_editing_controller.dart';
 import 'package:schoollearning/models/quiz/questions/true_false_question/true_false_question.dart';
 import 'package:schoollearning/models/quiz/questions/true_false_question/true_false_question_editing_controller.dart';
+import 'package:schoollearning/services/internet_connection_check.dart';
 
 class TaskEditingPage extends StatefulWidget {
   final Question question;
@@ -31,6 +32,20 @@ class _TaskEditingPageState extends State<TaskEditingPage> {
   _TaskEditingPageState(this.question);
 
   GlobalKey<FormState> _questionDataFormKey = GlobalKey<FormState>();
+
+  InternetConnection internetConnection = InternetConnection();
+
+  @override
+  void initState() {
+    internetConnection.checkConnection(context);
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    internetConnection.listener.cancel();
+    super.dispose();
+  }
 
   Question question;
   TextStyle textStyle = TextStyle(

@@ -3,16 +3,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:provider/provider.dart';
+import 'package:schoollearning/models/page.dart';
+import 'package:schoollearning/notifiers/page_notifier.dart';
 import 'package:schoollearning/routes/route_names.dart';
 import 'package:schoollearning/notifiers/auth_notifier.dart';
 import 'quiz.dart';
 import 'package:schoollearning/services/firestore_database.dart';
 
 class QuizList extends StatefulWidget {
-
-  QuizList(this.isUserQuizList);
-
-  final bool isUserQuizList;
 
   @override
   _QuizListState createState() => _QuizListState();
@@ -53,6 +51,16 @@ class _QuizListState extends State<QuizList> {
     });
   }
 
+  loadFeaturedQuizList(){
+    stream = db.getFeaturedQuizList(authNotifier.user.userData.featuredIds);
+
+    subscription = stream.listen((List<Quiz> data) {
+      setState(() {
+        quizList = data;
+      });
+    });
+  }
+
 
   @override
   void dispose() {
@@ -63,7 +71,21 @@ class _QuizListState extends State<QuizList> {
   @override
   Widget build(BuildContext context) {
     authNotifier = Provider.of<AuthNotifier>(context);
-    widget.isUserQuizList ? loadUserQuizList() : loadQuizList();
+    PageNotifier pageNotifier = Provider.of<PageNotifier>(context);
+    switch(pageNotifier.currentPage){
+      case AppPage.HOME : {
+        loadQuizList();
+        break;
+      }
+      case AppPage.USER_QUIZ: {
+        loadUserQuizList();
+        break;
+      }
+      case AppPage.FEATURED : {
+        loadFeaturedQuizList();
+        break;
+      }
+    }
 
     // return FutureBuilder(
     //     future: loadData(),

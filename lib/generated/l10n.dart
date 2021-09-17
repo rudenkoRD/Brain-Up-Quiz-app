@@ -844,6 +844,16 @@ class S {
       args: [],
     );
   }
+
+  /// `Waiting for internet connection.`
+  String get waiting_for_internet_label {
+    return Intl.message(
+      'Waiting for internet connection.',
+      name: 'waiting_for_internet_label',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

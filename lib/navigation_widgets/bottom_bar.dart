@@ -22,9 +22,10 @@ class _MyBottomBarState extends State<MyBottomBar> {
       color: Colors.blueGrey[900],
       notchMargin: 10.0,
       child: Container(
-        height: 60.0,
+        height: 56.0,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             TextButton(
               onPressed: () {

@@ -14,7 +14,7 @@ class _HomePageState extends State<HomePage> {
 
     return Container(
 
-      child: QuizList(false),
+      child: QuizList(),
         // DraggableScrollableSheet(
         //   minChildSize: 0.08,
         //   maxChildSize: 0.6,

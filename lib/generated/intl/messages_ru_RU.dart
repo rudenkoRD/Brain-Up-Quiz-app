@@ -99,6 +99,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "unknown_label" : MessageLookupByLibrary.simpleMessage("???"),
     "use_double_tap_to_delete_label" : MessageLookupByLibrary.simpleMessage("Чтобы удалить задание используйте двойное нажатие"),
     "user_answer" : MessageLookupByLibrary.simpleMessage("Пользовательский ответ"),
+    "waiting_for_internet_label" : MessageLookupByLibrary.simpleMessage("Ожидание интеренет соединения."),
     "waiting_for_wifi_label" : MessageLookupByLibrary.simpleMessage("Ожидане интернет соединения"),
     "yes_label" : MessageLookupByLibrary.simpleMessage("Да"),
     "yes_no_question_label" : MessageLookupByLibrary.simpleMessage("Да/нет")

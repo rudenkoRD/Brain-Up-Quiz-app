@@ -4,6 +4,7 @@ import 'package:schoollearning/models/page.dart';
 import 'package:schoollearning/navigation_widgets/bottom_bar.dart';
 import 'package:schoollearning/navigation_widgets/floating_action_button.dart';
 import 'package:schoollearning/notifiers/page_notifier.dart';
+import 'package:schoollearning/services/internet_connection_check.dart';
 
 class MainPage extends StatefulWidget {
   // This widget is the root of your application.
@@ -12,6 +13,21 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> {
+  InternetConnection internetConnection = InternetConnection();
+
+  @override
+  void initState() {
+    internetConnection.checkConnection(context);
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    internetConnection.listener.cancel();
+    super.dispose();
+  }
+
+
   @override
   Widget build(BuildContext context) {
     PageNotifier pageNotifier = Provider.of<PageNotifier>(context);
