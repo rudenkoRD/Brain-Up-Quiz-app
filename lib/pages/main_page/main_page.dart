@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:schoollearning/models/page.dart';
 import 'package:schoollearning/navigation_widgets/bottom_bar.dart';
+import 'package:schoollearning/navigation_widgets/floating_action_button.dart';
 import 'package:schoollearning/notifiers/page_notifier.dart';
 
 class MainPage extends StatefulWidget {
@@ -26,9 +28,9 @@ class _MainPageState extends State<MainPage> {
             style: TextStyle(color: Colors.white),
           ),
         ),
-        floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
         body: pageNotifier.pageWidget,
         bottomNavigationBar: MyBottomBar(),
+        floatingActionButton: pageNotifier.currentPage == AppPage.USER_QUIZ ? MyFloatingActionButton() : null,
       ),
     );
   }

@@ -3,7 +3,6 @@ import 'package:provider/provider.dart';
 import 'package:schoollearning/generated/l10n.dart';
 import 'package:schoollearning/models/page.dart';
 import 'package:schoollearning/notifiers/page_notifier.dart';
-import 'package:schoollearning/pages/main_page/my_page.dart';
 
 import 'bottom_menu_sheet.dart';
 
