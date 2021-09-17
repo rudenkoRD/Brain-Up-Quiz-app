@@ -27,7 +27,7 @@ class _MainPageState extends State<MainPage> {
           ),
         ),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-        body: pageNotifier.page,
+        body: pageNotifier.pageWidget,
         bottomNavigationBar: MyBottomBar(),
       ),
     );

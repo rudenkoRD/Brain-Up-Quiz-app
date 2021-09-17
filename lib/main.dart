@@ -9,7 +9,7 @@ import 'package:schoollearning/pages/login_signin_page/welcomePage.dart';
 import 'package:schoollearning/routes/route_names.dart';
 import 'package:schoollearning/notifiers/loading_notifier.dart';
 import 'package:schoollearning/notifiers/logging_page_notifier.dart';
-import 'package:schoollearning/pages/base/main_page.dart';
+import 'package:schoollearning/pages/main_page/main_page.dart';
 import 'package:schoollearning/routes/route-generator.dart';
 import 'package:schoollearning/notifiers/auth_notifier.dart';
 import 'package:schoollearning/notifiers/page_notifier.dart';

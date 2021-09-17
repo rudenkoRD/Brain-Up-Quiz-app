@@ -8,7 +8,9 @@ class PageNotifier with ChangeNotifier {
     this._currentPage = page;
     notifyListeners();
   }
+  
+  get currentPage => _currentPage;
 
-  Widget get page => _currentPage.pageWidget;
+  Widget get pageWidget => _currentPage.pageWidget;
   String titleName(context) => _currentPage.titleName(context);
 }

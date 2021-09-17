@@ -1,23 +1,30 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:provider/provider.dart';
 import 'package:schoollearning/routes/route_names.dart';
 import 'package:schoollearning/notifiers/auth_notifier.dart';
 import 'quiz.dart';
 import 'package:schoollearning/services/firestore_database.dart';
 
-class LessonsList extends StatefulWidget {
+class QuizList extends StatefulWidget {
+
+  QuizList(this.isUserQuizList);
+
+  final bool isUserQuizList;
+
   @override
-  _LessonsListState createState() => _LessonsListState();
+  _QuizListState createState() => _QuizListState();
 }
 
-var quizList = <Quiz>[];
+class _QuizListState extends State<QuizList> {
 
-class _LessonsListState extends State<LessonsList> {
+  List quizList = <Quiz>[];
+
   @override
   void initState() {
-    loadQuizList();
+    //loadUserQuizList();
     super.initState();
   }
 
@@ -26,8 +33,18 @@ class _LessonsListState extends State<LessonsList> {
   Stream<List<Quiz>> stream;
   StreamSubscription subscription;
 
-  loadQuizList() async {
+  loadQuizList() {
      stream = db.getQuizList();
+
+    subscription = stream.listen((List<Quiz> data) {
+      setState(() {
+        quizList = data;
+      });
+    });
+  }
+
+  loadUserQuizList() {
+    stream = db.getUsersQuizList(authNotifier.user);
 
     subscription = stream.listen((List<Quiz> data) {
       setState(() {
@@ -46,13 +63,39 @@ class _LessonsListState extends State<LessonsList> {
   @override
   Widget build(BuildContext context) {
     authNotifier = Provider.of<AuthNotifier>(context);
+    widget.isUserQuizList ? loadUserQuizList() : loadQuizList();
 
-    return Container(
+    // return FutureBuilder(
+    //     future: loadData(),
+    //     builder: (context, snapshot){
+    //       if(snapshot.hasError){
+    //         throw('error during loading quiz list');
+    //       }
+    //       if(snapshot.connectionState == ConnectionState.done){
+    //         return Container(
+    //             color: Colors.blueGrey,
+    //             child: ListView.builder(
+    //               itemBuilder: (context, i) => _testItem(i, context),
+    //               itemCount: quizList.length,
+    //             ));
+    //       }
+    //       return Container(
+    //         color: Colors.blueGrey,
+    //         child: SpinKitCircle(
+    //           color: Colors.orange,
+    //         ),
+    //       );
+    //     },
+    // );
+
+    return quizList.length != 0 ? Container(
         color: Colors.blueGrey,
         child: ListView.builder(
           itemBuilder: (context, i) => _testItem(i, context),
           itemCount: quizList.length,
-        ));
+        )) : Container(
+      child: SpinKitCircle(color: Colors.orange),
+    );
   }
 
   Widget _testItem(int index, BuildContext context) {
