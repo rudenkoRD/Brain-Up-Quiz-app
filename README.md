@@ -9,7 +9,7 @@ This project is build using Flutter,Dart and Firestore framework as database for
 **NOTE**: [Set up Firebase app with your account](https://console.firebase.google.com/) to be able to compile and run an app on your devices.
 
 ## Screenshots
-![sc1](https://i2.paste.pics/e8a42c36a0a9e4973c4def23a9245ef8.png)
+<img src="https://i2.paste.pics/e8a42c36a0a9e4973c4def23a9245ef8.png" width="200">
 ![sc2](https://i2.paste.pics/ad5c28b33b445239ac641cf9538d4ebb.png)
 ![sc3](https://i2.paste.pics/86aedd5ce973833fd0b6b47b0d78662c.png)
 ![sc4](https://i2.paste.pics/c0f82af429b37af5ebd0d6feda6d30a2.png)
