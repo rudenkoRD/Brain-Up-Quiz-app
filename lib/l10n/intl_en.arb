@@ -81,5 +81,6 @@
   "waiting_for_wifi_label" : "Waiting for internet connection",
   "login_fail_label" : "Fail. Check your password and username",
   "signup_fail_label": "Fail. Try again later",
-  "waiting_for_internet_label": "Waiting for internet connection."
+  "waiting_for_internet_label": "Waiting for internet connection.",
+  "empty_label": "Empty"
 }

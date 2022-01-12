@@ -39,6 +39,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "delete_text_warning" : MessageLookupByLibrary.simpleMessage("Тест будет безвозвратно удален!"),
     "difficulty_label" : MessageLookupByLibrary.simpleMessage("Сложность"),
     "easy_label" : MessageLookupByLibrary.simpleMessage("легко"),
+    "empty_label" : MessageLookupByLibrary.simpleMessage("Пусто"),
     "english_lang_label" : MessageLookupByLibrary.simpleMessage("Английский"),
     "enter_correct_answer_label" : MessageLookupByLibrary.simpleMessage("Введите правильный ответ"),
     "enter_heading_label" : MessageLookupByLibrary.simpleMessage("Введите новое название"),

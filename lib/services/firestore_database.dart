@@ -41,7 +41,7 @@ class FirestoreService {
   }
 
   Stream<List<Quiz>> getFeaturedQuizList(List<String> featuredIds){
-    return _quizCollection.where('__name__', whereIn: featuredIds).snapshots().map((QuerySnapshot data) =>
+    return _quizCollection.where('__name__', whereIn: featuredIds.isEmpty ? [' '] : featuredIds).snapshots().map((QuerySnapshot data) =>
         data.docs.map((DocumentSnapshot doc) =>
         Quiz.fromJson(doc.id, doc.data()))
         .toList());

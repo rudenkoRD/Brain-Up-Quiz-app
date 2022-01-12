@@ -854,6 +854,16 @@ class S {
       args: [],
     );
   }
+
+  /// `Empty`
+  String get empty_label {
+    return Intl.message(
+      'Empty',
+      name: 'empty_label',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

@@ -12,7 +12,7 @@ login(AppUser user, AuthNotifier authNotifier, LoadingNotifier loadingNotifier, 
   UserCredential authResult =
       await FirebaseAuth.instance.signInWithEmailAndPassword(email: user.email, password: user.password).catchError((error) {
     loadingNotifier.isLoading = false;
-    Scaffold.of(context).showSnackBar(
+    ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
         content: Text(
           S.of(context).login_fail_label,

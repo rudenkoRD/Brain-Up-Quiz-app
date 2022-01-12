@@ -551,7 +551,7 @@ class _QuizOverviewAppBarState extends State<QuizOverviewAppBar> {
       brightness: Brightness.dark,
       elevation: 4.0,
       backgroundColor: Colors.blueGrey[900],
-      expandedHeight: 310,
+      expandedHeight: 332,
       floating: false,
       pinned: true,
       flexibleSpace: FlexibleSpaceBar(
@@ -663,7 +663,7 @@ class StatusUncompletedCard extends StatelessWidget {
       child: Card(
         color: Colors.blueGrey[400],
         child: Container(
-          padding: EdgeInsets.all(6.0),
+          margin: EdgeInsets.all(6.0),
           child: Column(
             children: <Widget>[
               Text(

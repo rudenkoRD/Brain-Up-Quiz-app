@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:provider/provider.dart';
+import 'package:schoollearning/generated/l10n.dart';
 import 'package:schoollearning/models/page.dart';
 import 'package:schoollearning/notifiers/page_notifier.dart';
 import 'package:schoollearning/routes/route_names.dart';
@@ -18,7 +19,7 @@ class QuizList extends StatefulWidget {
 
 class _QuizListState extends State<QuizList> {
 
-  List quizList = <Quiz>[];
+  List quizList;
 
   @override
   void initState() {
@@ -35,9 +36,11 @@ class _QuizListState extends State<QuizList> {
      stream = db.getQuizList();
 
     subscription = stream.listen((List<Quiz> data) {
-      setState(() {
-        quizList = data;
-      });
+      if(mounted) {
+        setState(() {
+          quizList = data;
+        });
+      }
     });
   }
 
@@ -45,9 +48,11 @@ class _QuizListState extends State<QuizList> {
     stream = db.getUsersQuizList(authNotifier.user);
 
     subscription = stream.listen((List<Quiz> data) {
-      setState(() {
-        quizList = data;
-      });
+      if(mounted) {
+        setState(() {
+          quizList = data;
+        });
+      }
     });
   }
 
@@ -55,9 +60,11 @@ class _QuizListState extends State<QuizList> {
     stream = db.getFeaturedQuizList(authNotifier.user.userData.featuredIds);
 
     subscription = stream.listen((List<Quiz> data) {
-      setState(() {
-        quizList = data;
-      });
+      if(mounted) {
+        setState(() {
+          quizList = data;
+        });
+      }
     });
   }
 
@@ -110,14 +117,29 @@ class _QuizListState extends State<QuizList> {
     //     },
     // );
 
-    return quizList.length != 0 ? Container(
+    if(quizList == null){
+      return Container(
+        child: SpinKitCircle(color: Colors.orange)
+      );
+    }else if(quizList.length == 0){
+      return Container(
+        child: Center(
+          child: Text(
+              S.of(context).empty_label,
+              style: TextStyle(
+                fontSize: 20,
+              ),
+          ),
+        ),
+      );
+    }else {
+      return Container(
         color: Colors.blueGrey,
         child: ListView.builder(
           itemBuilder: (context, i) => _testItem(i, context),
           itemCount: quizList.length,
-        )) : Container(
-      child: SpinKitCircle(color: Colors.orange),
-    );
+        ));
+    }
   }
 
   Widget _testItem(int index, BuildContext context) {

@@ -81,5 +81,6 @@
   "waiting_for_wifi_label" : "Ожидане интернет соединения",
   "login_fail_label" : "Ошибка, проверьте пароль и имя пользователя",
   "signup_fail_label": "Ошибка, попробуйте позже",
-  "waiting_for_internet_label": "Ожидание интеренет соединения."
+  "waiting_for_internet_label": "Ожидание интеренет соединения.",
+  "empty_label": "Пусто"
 }
