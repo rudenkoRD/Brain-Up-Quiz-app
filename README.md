@@ -6,7 +6,8 @@ Create, share and take a variety of quizzes
 
 This project is build using Flutter,Dart and Firestore framework as database for storing quizzes and to register users
 
-**NOTE**: [Set up Firebase app with your account](https://console.firebase.google.com/) to be able to compile and run an app on your devices.
+**NOTE**: [Set up Firebase app with your account](https://console.firebase.google.com/) and [Set up Firebase Authentication by email](https://firebase.google.com/products/auth?gclid=CjwKCAiAlfqOBhAeEiwAYi43FyhmmjD5NiwL6hz5gLzM5V444Hxq-DjhS_H1hL3Rksou9y4QUE5JSRoCH4wQAvD_BwE&gclsrc=aw.ds) to be able to compile and run an app on your devices.
+            
 
 ## Screenshots
 | <img src="https://i2.paste.pics/e8a42c36a0a9e4973c4def23a9245ef8.png" width="300"> | <img src="https://i2.paste.pics/ad5c28b33b445239ac641cf9538d4ebb.png" width="300"> |
