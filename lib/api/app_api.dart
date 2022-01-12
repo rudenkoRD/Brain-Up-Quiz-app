@@ -42,12 +42,15 @@ signup(AppUser user, AuthNotifier authNotifier, LoadingNotifier loadingNotifier,
       .catchError((error) {
     print(error);
     loadingNotifier.isLoading = false;
-    Scaffold.of(context).showSnackBar(SnackBar(
-      content: Text(
-        S.of(context).signup_fail_label,
-        style: TextStyle(color: Colors.red),
-      ),
-    ));
+
+    ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text(
+            S.of(context).signup_fail_label,
+            style: TextStyle(color: Colors.red),
+          ),
+        ),
+    );
   });
 
   if (authResult != null) {

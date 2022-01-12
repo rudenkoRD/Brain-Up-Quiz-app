@@ -1,10 +1,10 @@
-# brainup_quiz_app
+# BrainUp:QuizApp
 
-Quiz app
+Create, share and take a variety of quizzes
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+This project is build using Flutter,Dart and Firestore framework as database for storing quizzes and to register users
 
 A few resources to get you started if this is your first Flutter project:
 
